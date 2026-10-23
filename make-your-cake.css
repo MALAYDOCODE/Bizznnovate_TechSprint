@@ -1,0 +1,389 @@
+
+:root {
+    --pink: #c8466b;
+    --pink-dark: #a92e53;
+    --pink-light: #fff1f5;
+    --cream: #fffaf6;
+    --brown: #49332e;
+    --muted: #786c68;
+    --border: #eadbd5;
+    --green: #26794c;
+    --red: #b33d43;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--brown);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.site-header {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 7%;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.brand-icon {
+    font-size: 34px;
+}
+
+.brand small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.back-link {
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.page-container {
+    width: min(100% - 32px, 950px);
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 10px 35px;
+}
+
+.eyebrow {
+    color: var(--pink);
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.hero h1 {
+    margin: 10px 0;
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero > p:last-child {
+    color: var(--muted);
+}
+
+.booking-card {
+    padding: clamp(20px, 5vw, 42px);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 12px 40px #5031260d;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.step {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.section-heading p {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.section-spaced {
+    margin-top: 38px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fffdfc;
+    color: var(--brown);
+    font: inherit;
+    font-size: 14px;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 2px solid #e9a5b9;
+    border-color: var(--pink);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.availability-card {
+    display: flex;
+    gap: 12px;
+    padding: 17px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #f7f3f0;
+    border: 1px solid var(--border);
+}
+
+.availability-card.available {
+    background: #eff8f1;
+    border-color: #c6e5ce;
+}
+
+.availability-card.full {
+    background: #fff0f0;
+    border-color: #f1cccc;
+}
+
+.availability-dot {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    margin-top: 7px;
+    background: #b5a9a3;
+    border-radius: 50%;
+}
+
+.availability-card h3 {
+    margin: 0 0 3px;
+    font-size: 16px;
+}
+
+.availability-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.suggested-date {
+    margin: 0 0 18px;
+    padding: 10px 15px;
+    background: white;
+    border: 1px solid var(--pink);
+    border-radius: 9px;
+    color: var(--pink-dark);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.suggested-date[hidden],
+#addressGroup[hidden],
+#orderConfirmation[hidden] {
+    display: none !important;
+}
+
+.date-grid {
+    margin-top: 20px;
+}
+
+.form-error {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 18px 0 0;
+}
+
+.form-error:empty {
+    display: none;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--pink);
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+    background: #b7a9a9;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 13px 0 0;
+}
+
+.order-confirmation {
+    margin-top: 25px;
+    padding: 24px;
+    background: var(--pink-light);
+    border: 1px solid #f0c4d2;
+    border-radius: 16px;
+    overflow-wrap: anywhere;
+}
+
+.order-confirmation h2 {
+    margin: 0 0 12px;
+    color: var(--pink-dark);
+    font-size: 24px;
+}
+
+.order-confirmation p {
+    margin: 7px 0;
+}
+
+.order-confirmation .confirmation-reminder {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f0c4d2;
+    font-weight: 600;
+}
+
+.contact-note {
+    margin: 30px 0;
+    padding: 28px;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+.contact-note h2 {
+    margin: 0;
+}
+
+.contact-note p {
+    color: var(--muted);
+}
+
+.contact-note a {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 9px;
+    background: #208b52;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 12px 16px;
+    }
+
+    .brand {
+        font-size: 16px;
+        gap: 7px;
+    }
+
+    .brand-icon {
+        font-size: 27px;
+    }
+
+    .back-link {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 38px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+}
