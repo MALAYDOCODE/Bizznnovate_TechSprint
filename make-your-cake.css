@@ -1,4 +1,32 @@
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    padding: 8px 0;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--pink);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    color: var(--brown);
+    font-size: 27px;
+    cursor: pointer;
+}
 :root {
     --pink: #c8466b;
     --pink-dark: #a92e53;
