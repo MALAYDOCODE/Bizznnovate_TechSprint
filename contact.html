@@ -11,17 +11,28 @@
     <script src="contact.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <a href="index.html" class="logo">Make My Cake<span>.</span></a>
+   <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">♡</span>
+            <span>
+                <strong>MAKE MY CAKE</strong>
+                <small>A LITTLE HAPPINESS IN EVERY SLICE</small>
+            </span>
+        </a>
 
-        <nav>
-            <a href="index.html">Home</a>
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a class="active" href="index.html">Home</a>
             <a href="menu.html">Menu</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
             <a href="make-your-cake.html">Make Your Cake</a>
+         
         </nav>
     </header>
-
     <main>
         <section class="contact-hero">
             <span class="eyebrow">WE'D LOVE TO HEAR FROM YOU</span>
